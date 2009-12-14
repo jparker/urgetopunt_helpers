@@ -1,0 +1,7 @@
+= urgetopunt_helpers
+
+This plugin contains some general purpose Rails view helpers.
+
+== Installation
+
+  ./script/plugin install git://github.com/jparker/urgetopunt_helpers.git
