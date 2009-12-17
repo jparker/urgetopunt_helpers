@@ -24,14 +24,9 @@ module Urgetopunt
       link_to 'edit', url, options.reverse_merge(:title => 'Edit record')
     end
     
-    def link_to_confirm_destroy(url, options = {})
-      link_to 'delete', url, options.reverse_merge(:title => 'Delete record')
-    end
-    
     def link_to_destroy(url, options = {})
       classes = (options.delete(:class) || '').split(/\s+/) | ['destroy']
-      options[:class] = classes.join(' ')
-      link_to 'delete', url, options.reverse_merge(:title => 'Delete record')
+      link_to 'delete', url, options.reverse_merge(:title => 'Delete record', :class => classes.join(' '))
     end
     
     def link_to_next(url, options = {})
