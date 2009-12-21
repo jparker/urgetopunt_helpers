@@ -4,6 +4,10 @@ module Urgetopunt
       content_for(:title) { text }
     end
     
+    def sidebar(&block)
+      content_for(:sidebar) { concat capture(&block) }
+    end
+    
     def table_row_for(record, options = {}, &block)
       classes = [cycle('odd', 'even')] | (options.delete(:class) || '').split(/\s+/)
       options[:class] = classes.join(' ')
