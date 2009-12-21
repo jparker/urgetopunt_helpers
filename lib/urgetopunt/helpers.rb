@@ -15,7 +15,7 @@ module Urgetopunt
     end
     
     def if_exists(record, &block)
-      unless record.try(:new_record?)
+      unless record.nil? || record.new_record?
         block.call
       end
     end
